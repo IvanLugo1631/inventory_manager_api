@@ -1,3 +1,13 @@
-from sqlmodel import create_engine, SQLModel, Session
+import os
+from dotenv import load_dotenv
 
-DATABASE_URL =  
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker
+
+load_dotenv()
+engine = create_engine(os.getenv("POSTGRES_DATABASE_URI"))
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+
+Base = declarative_base()
+
