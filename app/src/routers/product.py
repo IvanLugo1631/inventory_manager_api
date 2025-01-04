@@ -7,7 +7,7 @@ from app.src.routers import dependencies
 from app.src.domain.product import schemas, services
 
 router = APIRouter(
-    prefix="/products",
+    prefix="/api/products",
     tags=["products"]
 )
 

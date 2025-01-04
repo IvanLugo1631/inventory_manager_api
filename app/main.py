@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .src.routers import product
+from .src.routers import product, inventory, store
 
 
 app = FastAPI(
@@ -21,6 +21,8 @@ app.add_middleware(
 
 # Include routers
 app.include_router(product.router)
+app.include_router(inventory.router)
+app.include_router(store.router)
 
 @app.get("/")
 async def root():

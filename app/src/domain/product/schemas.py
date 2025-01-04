@@ -18,7 +18,7 @@ class ProductBase(BaseModel):
 class ProductCreate(ProductBase):
     """Schema for creating a new product.
     """
-    
+     
     pass
 
 class ProductUpdate(BaseModel):
