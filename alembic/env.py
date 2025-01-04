@@ -21,7 +21,11 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 
+from app.src.domain.movement.movement import Movement 
+from app.src.domain.product.models import Product
+from app.src.domain.store.models import Store
 from app.src.database.connection import Base
+
 
 target_metadata = Base.metadata
 

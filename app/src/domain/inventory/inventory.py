@@ -6,7 +6,7 @@ from ..database.connection import Base
 class Inventory(Base):
     __tablename__ = 'inventory'
     
-    id  = Column(String, primary_key=True, index=True)
+    id  = Column(String, primary_key=True, index=True, default=lambda: str(uuid.uuid4()))
     product_id = Column(String, ForeignKey('products.id'), index=True)
     description = Column(String)
     category = Column(String, index=True)
