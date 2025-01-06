@@ -34,18 +34,46 @@ A FastAPI-based microservice architecture designed for handling REST APIs, with 
     pip install -r requirements.txt
     ```
 
-## Docker Setup
-- Build and start containers:
-  ```bash
-  docker-compose up --build
-  ```
+## Option 1: Docker Compose Setup
+To set up the project using Docker Compose, follow these steps:
 
-- Stop containers:
-  ```bash
-  docker-compose down
-  ```
+1. Change to the `docker-compose` branch:
+    ```bash
+    git checkout docker-compose
+    ```
+
+2. Build and start the containers:
+    ```bash
+    docker-compose up --build
+    ```
+
+3. Stop the containers:
+    ```bash
+    docker-compose down
+    ```
+
+## Option 2: Run the app
+To set up the project, follow these steps:
+
+1. Change to the `main` branch:
+    ```bash
+    git checkout main
+    ```
+
+2. Install the required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. Start the app:
+    ```bash
+    uvicorn app.main:app --reload
+    ```
+
+4. Access the app at [http://localhost:8000](http://localhost:8000)
 
 ## Database Migrations
+
 - Create new migration:
   ```bash
   alembic revision --autogenerate -m "Your migration message"
@@ -64,6 +92,10 @@ A FastAPI-based microservice architecture designed for handling REST APIs, with 
 - Database Integration: PostgreSQL configured as a microservice
 - Docker Support: Containerized deployment for consistency across environments
 - Migration Management: Database versioning with Alembic
+- Unitest: pytest to run it create every edge case 
+- Stress test: 
+    - Locust: Open-source load testing tool that allows to define user behavior with Python code and simulate multiple users.
+
 
 ## Infrastructure Components
 - FastAPI Application Server
@@ -71,6 +103,16 @@ A FastAPI-based microservice architecture designed for handling REST APIs, with 
 - OAuth2.0 Authentication Service
 - Docker Containers
 - Alembic Migration System
+  
+  Full System
+
+  
+![image](https://github.com/user-attachments/assets/9b547b23-1eae-47e2-b153-3325fea45944)
+
+Data Model
+
+
+![image](https://github.com/user-attachments/assets/ab09b49d-44a7-4f72-afc3-38b2f7c6bca3)
 
 ## API Documentation
 Once running, access the API documentation at:
