@@ -14,7 +14,7 @@ router = APIRouter(
     tags=["inventory"]
 )
 
-@router.post("/", response_model=schemasInventory.Inventory)
+@router.post("/create", response_model=schemasInventory.Inventory)
 def create_inventory(
     inventory: schemasInventory.InventoryCreate, 
     db: Session = Depends(dependencies.get_db)
