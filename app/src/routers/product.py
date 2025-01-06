@@ -11,7 +11,7 @@ router = APIRouter(
     tags=["products"]
 )
 
-@router.post("/", response_model=schemas.Product)
+@router.post("/create", response_model=schemas.Product)
 def create_product(product: schemas.ProductCreate, db: Session = Depends(dependencies.get_db)):
     """Create a new product.
     """
