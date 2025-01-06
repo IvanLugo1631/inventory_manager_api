@@ -10,6 +10,17 @@ A FastAPI-based microservice architecture designed for handling REST APIs, with 
 - Docker for containerization
 - OAuth2.0 for authentication
 
+- 
+  Full System
+
+  
+![image](https://github.com/user-attachments/assets/9b547b23-1eae-47e2-b153-3325fea45944)
+
+Data Model
+
+
+![image](https://github.com/user-attachments/assets/ab09b49d-44a7-4f72-afc3-38b2f7c6bca3)
+
 ## Installation
 1. Clone the repository:
     ```bash
