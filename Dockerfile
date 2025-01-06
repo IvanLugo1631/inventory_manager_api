@@ -4,5 +4,5 @@ COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 EXPOSE 8000
-ENV POSTGRES_DATABASE_URI=postgresql://postgres.ccafmriemaxluvacwokn:fu2hxj6LNEd8Ks4F@aws-0-us-west-1.pooler.supabase.com:6543/postgres
+ENV POSTGRES_DATABASE_URI=postgresql://fastapi_user:strongpassword123@db:5432/fastapi_db
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
