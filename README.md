@@ -1,4 +1,4 @@
-# DEACERO - FastAPI Microservice
+# DEACERO 
 
 ## Description
 A FastAPI-based microservice architecture designed for handling REST APIs, with PostgreSQL integration and OAuth2.0 authentication. This project emphasizes scalability, security, and performance through asynchronous programming.
